@@ -2,7 +2,7 @@
   "name": "eslint-plugin-hapi",
   "version": "1.0.0",
   "description": "ESLint plugin containing hapi style guide rules",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "node node_modules/.bin/lab -v -t 100 -a code"
   },
