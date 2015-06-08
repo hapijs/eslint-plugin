@@ -1,8 +1,7 @@
 'use strict';
-
 var Code = require('code');
 var Lab = require('lab');
-var Plugin = require('../');
+var Plugin = require('../lib');
 
 var lab = exports.lab = Lab.script();
 var expect = Code.expect;
@@ -18,8 +17,9 @@ describe('ESLint Plugin', function() {
 
     var rules = Object.keys(Plugin.rules);
 
-    expect(rules.length).to.equal(1);
-    expect(rules).to.deep.equal(['hapi-scope-start']);
+    expect(rules.length).to.equal(2);
+    expect(rules.indexOf('hapi-capitalize-modules')).to.not.equal(-1);
+    expect(rules.indexOf('hapi-scope-start')).to.not.equal(-1);
 
     for (var i = 0; i < rules.length; ++i) {
       expect(Plugin.rules[rules[i]]).to.be.a.function();
