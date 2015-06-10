@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-hapi",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "ESLint plugin containing hapi style guide rules",
   "main": "lib/index.js",
   "scripts": {
@@ -8,19 +8,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cjihrig/eslint-plugin-hapi.git"
+    "url": "https://github.com/continuationlabs/eslint-plugin-hapi.git"
   },
   "keywords": [
+    "lint",
     "eslint",
     "eslintplugin",
     "hapi"
   ],
-  "author": "Colin J. Ihrig <cjihrig@gmail.com> (http://www.cjihrig.com/)",
+  "author": "Continuation Labs",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cjihrig/eslint-plugin-hapi/issues"
+    "url": "https://github.com/continuationlabs/eslint-plugin-hapi/issues"
   },
-  "homepage": "https://github.com/cjihrig/eslint-plugin-hapi",
+  "homepage": "https://github.com/continuationlabs/eslint-plugin-hapi",
   "dependencies": {
     "hapi-capitalize-modules": "1.x.x",
     "hapi-scope-start": "1.x.x"
