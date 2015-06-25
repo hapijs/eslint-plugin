@@ -24,7 +24,8 @@
   "homepage": "https://github.com/continuationlabs/eslint-plugin-hapi",
   "dependencies": {
     "hapi-capitalize-modules": "1.x.x",
-    "hapi-scope-start": "1.x.x"
+    "hapi-scope-start": "1.x.x",
+    "no-shadow-relaxed": "1.x.x"
   },
   "devDependencies": {
     "code": "1.x.x",
