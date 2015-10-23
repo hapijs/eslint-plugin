@@ -10,8 +10,8 @@ var it = lab.it;
 
 Code.settings.truncateMessages = false;
 
-describe('ESLint Plugin', function() {
-  it('exposes all expected rules', function(done) {
+describe('ESLint Plugin', function () {
+  it('exposes all expected rules', function (done) {
     expect(Plugin.rules).to.exist();
     expect(Plugin.rules).to.be.an.object();
 
