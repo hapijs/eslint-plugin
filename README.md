@@ -8,4 +8,5 @@ ESLint plugin containing hapi style guide rules. This plugin includes the follow
 
 - [`hapi-capitalize-modules`](https://www.npmjs.com/package/hapi-capitalize-modules) - Enforces capitalization of imported module variables.
 - [`hapi-scope-start`](https://www.npmjs.com/package/hapi-scope-start) - Enforces a new line at the beginning of function scope.
+- [`no-arrowception`](https://www.npmjs.com/package/no-arrowception) - Prevents arrow functions that implicitly create additional arrow functions.
 - [`no-shadow-relaxed`](https://www.npmjs.com/package/no-shadow-relaxed) - Extension of ESLint's native `no-shadow` rule that allows certain variable names to be ignored.
