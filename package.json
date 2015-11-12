@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-hapi",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "ESLint plugin containing hapi style guide rules",
   "author": "Continuation Labs <contact@continuation.io> (http://continuation.io/)",
   "main": "lib/index.js",
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/continuationlabs/eslint-plugin-hapi",
   "dependencies": {
     "hapi-capitalize-modules": "1.x.x",
+    "hapi-for-you": "1.x.x",
     "hapi-scope-start": "2.x.x",
     "no-arrowception": "1.x.x"
   },
