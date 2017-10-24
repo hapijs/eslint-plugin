@@ -25,12 +25,13 @@
   "dependencies": {
     "hapi-capitalize-modules": "1.x.x",
     "hapi-for-you": "1.x.x",
+    "hapi-no-var": "1.x.x",
     "hapi-scope-start": "2.x.x",
     "no-arrowception": "1.x.x"
   },
   "devDependencies": {
-    "belly-button": "1.x.x",
-    "code": "1.x.x",
-    "lab": "6.x.x"
+    "belly-button": "4.x.x",
+    "code": "4.x.x",
+    "lab": "14.x.x"
   }
 }
