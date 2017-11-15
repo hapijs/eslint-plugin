@@ -10,4 +10,4 @@ ESLint plugin containing hapi style guide rules. This plugin includes the follow
 - [`hapi-for-you`](https://www.npmjs.com/package/hapi-for-you) - Enforces `for` loop iterator variable rules and restricts loop nesting depth.
 - [`hapi-scope-start`](https://www.npmjs.com/package/hapi-scope-start) - Enforces a new line at the beginning of function scope.
 - [`no-arrowception`](https://www.npmjs.com/package/no-arrowception) - Prevents arrow functions that implicitly create additional arrow functions.
-- [`hapi-no-var`](https://www.npmjs.com/package/hapi-no-var) - Enforces the usage of var declarations only in try-catch scope
+- [`hapi-no-var`](https://www.npmjs.com/package/hapi-no-var) - Enforces the usage of var declarations only in try-catch scope.
