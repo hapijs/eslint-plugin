@@ -1,8 +1,8 @@
 <a href="http://hapijs.com"><img src="https://github.com/hapijs/assets/blob/master/images/family.svg" width="180px" align="right" /></a>
 
-# eslint-plugin
+# eslint-plugin-hapi
 
-[![Build Status](https://travis-ci.org/hapijs/eslint-plugin.svg?branch=master)](https://travis-ci.org/hapijs/eslint-plugin)
+[![Build Status](https://travis-ci.org/hapijs/eslint-plugin-hapi.svg?branch=master)](https://travis-ci.org/hapijs/eslint-plugin-hapi)
 
 ESLint plugin containing hapi style guide rules. This plugin includes the following ESLint rules:
 
