@@ -25,10 +25,10 @@ describe('ESLint Plugin', () => {
         const rules = Object.keys(Plugin.rules);
 
         expect(rules.length).to.equal(5);
-        expect(rules.includes('hapi-capitalize-modules')).to.be.true();
-        expect(rules.includes('hapi-for-loop')).to.be.true();
-        expect(rules.includes('hapi-no-var')).to.be.true();
-        expect(rules.includes('hapi-scope-start')).to.be.true();
-        expect(rules.includes('hapi-no-arrowception')).to.be.true();
+        expect(rules.includes('capitalize-modules')).to.be.true();
+        expect(rules.includes('for-loop')).to.be.true();
+        expect(rules.includes('no-var')).to.be.true();
+        expect(rules.includes('scope-start')).to.be.true();
+        expect(rules.includes('no-arrowception')).to.be.true();
     });
 });
