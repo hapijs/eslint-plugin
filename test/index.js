@@ -27,7 +27,7 @@ describe('ESLint Plugin', () => {
         expect(rules.length).to.equal(5);
         expect(rules.includes('hapi-capitalize-modules')).to.be.true();
         expect(rules.includes('hapi-for-loop')).to.be.true();
-        expect(rules.includes('hapi-no-const')).to.be.true();
+        expect(rules.includes('hapi-no-var')).to.be.true();
         expect(rules.includes('hapi-scope-start')).to.be.true();
         expect(rules.includes('hapi-no-arrowception')).to.be.true();
     });
