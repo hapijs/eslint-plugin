@@ -2,7 +2,7 @@
 
 # eslint-plugin-hapi
 
-[![Build Status](https://travis-ci.org/hapijs/eslint-plugin-hapi.svg?branch=master)](https://travis-ci.org/hapijs/eslint-plugin-hapi)
+[![Build Status](https://travis-ci.org/hapijs/eslint-plugin-hapi.svg?branch=master)](https://travis-ci.org/hapijs/eslint-plugin-hapi) [![Greenkeeper badge](https://badges.greenkeeper.io/hapijs/eslint-plugin-hapi.svg)](https://greenkeeper.io/)
 
 ESLint plugin containing hapi style guide rules. This plugin includes the following ESLint rules:
 
