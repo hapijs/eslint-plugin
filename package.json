@@ -1,6 +1,6 @@
 {
   "name": "@hapi/eslint-plugin-hapi",
-  "version": "4.3.4",
+  "version": "4.3.5",
   "description": "ESLint plugin containing hapi style guide rules",
   "main": "lib/index.js",
   "repository": "https://github.com/hapijs/rule-eslint-plugin-hapi.git",
