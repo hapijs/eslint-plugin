@@ -2,8 +2,6 @@
 
 # @hapi/eslint-plugin-hapi
 
-[![Build Status](https://travis-ci.org/hapijs/eslint-plugin-hapi.svg?branch=master)](https://travis-ci.org/hapijs/eslint-plugin-hapi)
-
 ESLint plugin containing hapi style guide rules. This plugin includes the following ESLint rules:
 
 - [`@hapi/rule-capitalize-modules`](https://www.npmjs.com/package/@hapi/rule-capitalize-modules) - Enforces capitalization of imported module variables.
