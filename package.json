@@ -4,6 +4,9 @@
   "description": "ESLint plugin containing hapi style guide rules",
   "main": "lib/index.js",
   "repository": "https://github.com/hapijs/rule-eslint-plugin-hapi.git",
+  "files": [
+    "lib"
+  ],
   "keywords": [
     "lint",
     "eslint",
@@ -18,8 +21,8 @@
     "@hapi/rule-scope-start": "2.x.x"
   },
   "devDependencies": {
-    "@hapi/code": "6.x.x",
-    "@hapi/lab": "20.x.x"
+    "@hapi/code": "8.x.x",
+    "@hapi/lab": "22.x.x"
   },
   "scripts": {
     "test": "lab -t 100 -a @hapi/code -L"

@@ -1,4 +1,4 @@
-Copyright (c) 2019, Sideway Inc, and project contributors  
+Copyright (c) 2019-2020, Sideway Inc, and project contributors  
 Copyright (c) 2015-2019 Continuation Labs   
 All rights reserved.
 
