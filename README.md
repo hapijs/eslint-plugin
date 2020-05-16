@@ -1,11 +1,17 @@
-<a href="http://hapijs.com"><img src="https://raw.githubusercontent.com/hapijs/assets/master/images/family.png" width="180px" align="right" /></a>
+<a href="https://hapi.dev"><img src="https://raw.githubusercontent.com/hapijs/assets/master/images/family.png" width="180px" align="right" /></a>
 
 # @hapi/eslint-plugin-hapi
 
-ESLint plugin containing hapi style guide rules. This plugin includes the following ESLint rules:
+#### ESLint plugin containing hapi style guide rules.
 
-- [`@hapi/rule-capitalize-modules`](https://www.npmjs.com/package/@hapi/rule-capitalize-modules) - Enforces capitalization of imported module variables.
-- [`@hapi/rule-for-loop`](https://www.npmjs.com/package/@hapi/rule-for-loop) - Enforces `for` loop iterator variable rules and restricts loop nesting depth.
-- [`@hapi/rule-scope-start`](https://www.npmjs.com/package/@hapi/rule-scope-start) - Enforces a new line at the beginning of function scope.
-- [`@hapi/rule-no-arrowception`](https://www.npmjs.com/package/@hapi/rule-no-arrowception) - Prevents arrow functions that implicitly create additional arrow functions.
-- [`@hapi/rule-no-var`](https://www.npmjs.com/package/@hapi/rule-no-var) - Enforces the usage of var declarations only in try-catch scope.
+**eslint-plugin-hapi** is part of the **hapi** ecosystem and was designed to work seamlessly with the [hapi web framework](https://hapi.dev) and its other components (but works great on its own or with other frameworks). If you are using a different web framework and find this module useful, check out [hapi](https://hapi.dev) – they work even better together.
+
+### Visit the [hapi.dev](https://hapi.dev) Developer Portal for tutorials, documentation, and support
+
+## Useful resources
+
+- [Documentation and API](https://hapi.dev/family/eslint-plugin-hapi/)
+- [Version status](https://hapi.dev/resources/status/#eslint-plugin-hapi) (builds, dependencies, node versions, licenses, eol)
+- [Changelog](https://hapi.dev/family/eslint-plugin-hapi/changelog/)
+- [Project policies](https://hapi.dev/policies/)
+- [Free and commercial support options](https://hapi.dev/support/)
