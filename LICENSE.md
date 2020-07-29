@@ -1,5 +1,5 @@
 Copyright (c) 2019-2020, Sideway Inc, and project contributors  
-Copyright (c) 2015-2019 Continuation Labs   
+Copyright (c) 2015-2019 Continuation Labs and Colin J. Ihrig
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:

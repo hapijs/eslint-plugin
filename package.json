@@ -1,7 +1,7 @@
 {
   "name": "@hapi/eslint-plugin-hapi",
   "version": "4.3.5",
-  "description": "ESLint plugin containing hapi style guide rules",
+  "description": "ESLint plugin containing hapi style guide rules and config",
   "main": "lib/index.js",
   "repository": "https://github.com/hapijs/eslint-plugin-hapi.git",
   "files": [
@@ -11,6 +11,7 @@
     "lint",
     "eslint",
     "eslintplugin",
+    "eslintconfig",
     "hapi"
   ],
   "dependencies": {
