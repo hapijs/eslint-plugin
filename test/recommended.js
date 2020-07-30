@@ -7,8 +7,6 @@ const Code = require('@hapi/code');
 const ESLint = require('eslint');
 const Lab = require('@hapi/lab');
 
-const ConfigRecommended = require('../lib/config-recommended');
-
 
 const internals = {};
 
@@ -24,7 +22,7 @@ internals.lintFile = function (file) {
 
     const cli = new ESLint.CLIEngine({
         useEslintrc: false,
-        baseConfig: ConfigRecommended
+        baseConfig: { extends: 'plugin:@hapi/hapi/recommended' }
     });
 
     const data = Fs.readFileSync(Path.join(__dirname, file), 'utf8');

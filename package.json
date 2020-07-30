@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@hapi/code": "8.x.x",
+    "@hapi/eslint-plugin-hapi": "file:.",
     "@hapi/lab": "^23.0.0"
   },
   "scripts": {
