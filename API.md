@@ -1,7 +1,7 @@
 ESLint plugin containing hapi style guide rules and config. To use in your project, add
 [`@hapi/eslint-plugin-hapi`](https://github.com/hapijs/eslint-plugin-hapi) to your `package.json`, then in your ESLint configuration add:
 
-```
+```json
 {
   "extends": "plugin:@hapi/hapi/recommended"
 }
@@ -13,23 +13,66 @@ This plugin includes the following ESLint rules:
 
 ### capitalize-modules
 
-[`@hapi/rule-capitalize-modules`](https://www.npmjs.com/package/@hapi/rule-capitalize-modules) - Enforces capitalization of imported module variables.
+Enforces capitalization of imported module variables.
+
+#### `global-scope-only`
+
+If the string `'global-scope-only'` is passed as the first option to this rule,
+then it will only be enforced on assignments in the module's top level scope.
 
 ### for-loop
 
-[`@hapi/rule-for-loop`](https://www.npmjs.com/package/@hapi/rule-for-loop) - Enforces `for` loop iterator variable rules and restricts loop nesting depth.
+Enforces `for` loop iterator variable rules and restricts loop nesting depth.
+
+This rule enforces the following:
+
+- Restrict iterator variable names. `for` loop iterator variables should be named `i`. Nested loops should use the variables `j`, `k`, and so on.
+- Restrict loop nesting.  You can restrict the maximum nesting of `for` loops. By default, this limit is three.
+- Prevent postfix increment and decrement operators. The hapi style guide does not allow postfix increment and decrement operators in `for` loop updates. The prefix version of these operators should be used instead.
+- Single variable declaration in initialization section. A single `var i = 0;` is allowed in the initialization section. This only applies to variable declarations, not assignments to existing variables. This means that `for (i = 0, j = 0)` is allowed if `i` and `j` are existing variables. Variable declarations involving destructuring are not allowed.
+
+#### Rule options
+
+This rule can be configured by providing a single options object. The object supports the following keys.
+
+##### `maxDepth`
+
+A number representing the maximum allowed nesting of `for` loops. Defaults to three.
+
+##### `startIterator`
+
+The first variable iterator name to use. This defaults to `'i'`.
 
 ### no-var
 
-[`@hapi/rule-no-var`](https://www.npmjs.com/package/@hapi/rule-no-var) - Enforces the usage of var declarations only in try-catch scope.
+Enforces the usage of var declarations only in try-catch scope.
 
 ### scope-start
 
-[`@hapi/rule-scope-start`](https://www.npmjs.com/package/@hapi/rule-scope-start) - Enforces a new line at the beginning of function scope.
+Enforces a new line at the beginning of function scope.
+
+#### `allow-one-liners`
+
+If the string `'allow-one-liners'` is passed as the first option to this rule,
+then functions whose bodies contain zero or one statements are allowed to be
+written on a single line. This defaults to `true` for arrow functions, and
+`false` otherwise.
+
+#### `max-in-one-liner`
+
+The second option to this rule dictates the maximum number of statements allowed
+in the bodies of one line function. This must be used in conjunction with
+`allow-one-liners`. Defaults to one.
 
 ### no-arrowception
-        
-[`@hapi/rule-no-arrowception`](https://www.npmjs.com/package/@hapi/rule-no-arrowception) - Prevents arrow functions that implicitly create additional arrow functions.
+
+Prevents arrow functions that implicitly create additional arrow functions.
+
+This rule prevents the pattern () => () => () => ...;.
+
+Functions can still be returned by arrow functions whose bodies use curly braces and an explicit return.
+
+This rule does not accept any configuration options.
 
 ## Config
 
