@@ -30,7 +30,7 @@ internals.lintFile = function (file) {
 };
 
 
-describe('recommended', () => {
+describe('recommended config', () => {
 
     it('enforces file level strict mode', () => {
 

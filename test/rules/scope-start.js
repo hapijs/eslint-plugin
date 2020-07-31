@@ -34,7 +34,7 @@ describe('scope-start rule', () => {
             'function fn(foo, bar, baz) { return; }'
         ];
 
-        ruleTester.run(Rule.esLintRuleName, Rule, {
+        ruleTester.run('test', Rule, {
             valid: [],
             invalid: invalids.map((code) => {
 
@@ -68,7 +68,7 @@ describe('scope-start rule', () => {
             }`
         ];
 
-        ruleTester.run(Rule.esLintRuleName, Rule, {
+        ruleTester.run('test', Rule, {
             valid: valids.map((code) => {
 
                 return { code };
@@ -85,7 +85,7 @@ describe('scope-start rule', () => {
             'function fn(foo, bar, baz) { return; }'
         ];
 
-        ruleTester.run(Rule.esLintRuleName, Rule, {
+        ruleTester.run('test', Rule, {
             valid: valids.map((code) => {
 
                 return {
@@ -104,7 +104,7 @@ describe('scope-start rule', () => {
             'function fn() { let i = 0; i++; return; }'
         ];
 
-        ruleTester.run(Rule.esLintRuleName, Rule, {
+        ruleTester.run('test', Rule, {
             valid: [],
             invalid: invalids.map((code) => {
 
@@ -124,7 +124,7 @@ describe('scope-start rule', () => {
             'function fn() { console.log(\'broken\'); return; }'
         ];
 
-        ruleTester.run(Rule.esLintRuleName, Rule, {
+        ruleTester.run('test', Rule, {
             valid: [],
             invalid: invalids.map((code) => {
 
@@ -149,7 +149,7 @@ describe('scope-start rule', () => {
             'function fn() {/*test*/ }'
         ];
 
-        ruleTester.run(Rule.esLintRuleName, Rule, {
+        ruleTester.run('test', Rule, {
             valid: valids.map((code) => {
 
                 return { code };
@@ -167,7 +167,7 @@ describe('scope-start rule', () => {
             return;
         }`;
 
-        ruleTester.run(Rule.esLintRuleName, Rule, {
+        ruleTester.run('test', Rule, {
             valid: [{ code }],
             invalid: []
         });
@@ -207,7 +207,7 @@ describe('scope-start rule', () => {
             };
         });
 
-        ruleTester.run(Rule.esLintRuleName, Rule, {
+        ruleTester.run('test', Rule, {
             valid: valids,
             invalid: invalids
         });
