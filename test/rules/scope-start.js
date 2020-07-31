@@ -12,7 +12,7 @@ const { describe, it } = exports.lab = Lab.script();
 Code.settings.truncateMessages = false;
 
 
-describe('ESLint Rule', () => {
+describe('scope-start rule', () => {
 
     it('reports warning when function body does not begin with a blank line', () => {
 

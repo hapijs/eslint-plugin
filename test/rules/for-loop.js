@@ -15,7 +15,7 @@ const { describe, it } = exports.lab = Lab.script();
 Code.settings.truncateMessages = false;
 
 
-describe('ESLint Rule', () => {
+describe('for-loop rule', () => {
 
     it('enforces iterator variable naming', () => {
 

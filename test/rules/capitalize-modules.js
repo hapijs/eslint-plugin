@@ -12,7 +12,7 @@ const { describe, it } = exports.lab = Lab.script();
 Code.settings.truncateMessages = false;
 
 
-describe('ESLint Rule', () => {
+describe('capitalize-modules rule', () => {
 
     it('reports warning when module is not capitalized', () => {
 

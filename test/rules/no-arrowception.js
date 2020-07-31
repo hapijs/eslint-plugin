@@ -15,7 +15,7 @@ const { describe, it } = exports.lab = Lab.script();
 Code.settings.truncateMessages = false;
 
 
-describe('ESLint Rule', () => {
+describe('no-arrowception rule', () => {
 
     it('reports error when an arrow function implicitly creates another arrow function', () => {
 

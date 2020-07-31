@@ -13,7 +13,7 @@ const RuleTester = ESLint.RuleTester;
 Code.settings.truncateMessages = false;
 
 
-describe('ESLint Rule', () => {
+describe('no-var rule', () => {
 
     it('reports warning when vars used outside of try...catch scope', () => {
 
