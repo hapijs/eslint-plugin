@@ -1,5 +1,5 @@
 {
-  "name": "@hapi/eslint-plugin-hapi",
+  "name": "@hapi/eslint-plugin",
   "version": "4.3.5",
   "description": "ESLint plugin containing hapi style guide rules and config",
   "main": "lib/index.js",
@@ -17,7 +17,7 @@
   "dependencies": {},
   "devDependencies": {
     "@hapi/code": "8.x.x",
-    "@hapi/eslint-plugin-hapi": "file:.",
+    "@hapi/eslint-plugin": "file:.",
     "@hapi/lab": "^23.0.0",
     "eslint": "^7.5.0"
   },

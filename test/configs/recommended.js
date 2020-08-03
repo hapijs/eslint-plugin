@@ -22,7 +22,7 @@ internals.lintFile = function (file) {
 
     const cli = new ESLint.CLIEngine({
         useEslintrc: false,
-        baseConfig: { extends: 'plugin:@hapi/hapi/recommended' }
+        baseConfig: { extends: 'plugin:@hapi/recommended' }
     });
 
     const data = Fs.readFileSync(Path.join(__dirname, file), 'utf8');
@@ -217,7 +217,7 @@ describe('recommended config', () => {
         expect(msg.nodeType).to.equal('FunctionExpression');
     });
 
-    it('enforces @hapi/hapi/for-loop', () => {
+    it('enforces @hapi/for-loop', () => {
 
         const output = internals.lintFile('fixtures/hapi-for-you.js');
         const results = output.results[0];
@@ -229,7 +229,7 @@ describe('recommended config', () => {
 
         let msg = results.messages[0];
 
-        expect(msg.ruleId).to.equal('@hapi/hapi/for-loop');
+        expect(msg.ruleId).to.equal('@hapi/for-loop');
         expect(msg.severity).to.equal(1);
         expect(msg.message).to.equal('Expected iterator \'j\', but got \'k\'.');
         expect(msg.line).to.equal(7);
@@ -238,7 +238,7 @@ describe('recommended config', () => {
 
         msg = results.messages[1];
 
-        expect(msg.ruleId).to.equal('@hapi/hapi/for-loop');
+        expect(msg.ruleId).to.equal('@hapi/for-loop');
         expect(msg.severity).to.equal(1);
         expect(msg.message).to.equal('Update to iterator should use prefix operator.');
         expect(msg.line).to.equal(7);
@@ -246,7 +246,7 @@ describe('recommended config', () => {
         expect(msg.nodeType).to.equal('ForStatement');
     });
 
-    it('enforces @hapi/hapi/scope-start', () => {
+    it('enforces @hapi/scope-start', () => {
 
         const output = internals.lintFile('fixtures/hapi-scope-start.js');
         const results = output.results[0];
@@ -258,7 +258,7 @@ describe('recommended config', () => {
 
         const msg = results.messages[0];
 
-        expect(msg.ruleId).to.equal('@hapi/hapi/scope-start');
+        expect(msg.ruleId).to.equal('@hapi/scope-start');
         expect(msg.severity).to.equal(1);
         expect(msg.message).to.equal('Missing blank line at beginning of function.');
         expect(msg.line).to.equal(2);
@@ -266,7 +266,7 @@ describe('recommended config', () => {
         expect(msg.nodeType).to.equal('FunctionExpression');
     });
 
-    it('enforces @hapi/hapi/capitalize-modules', () => {
+    it('enforces @hapi/capitalize-modules', () => {
 
         const output = internals.lintFile('fixtures/hapi-capitalize-modules.js');
         const results = output.results[0];
@@ -278,7 +278,7 @@ describe('recommended config', () => {
 
         const msg = results.messages[0];
 
-        expect(msg.ruleId).to.equal('@hapi/hapi/capitalize-modules');
+        expect(msg.ruleId).to.equal('@hapi/capitalize-modules');
         expect(msg.severity).to.equal(1);
         expect(msg.message).to.equal('Imported module variable name not capitalized.');
         expect(msg.line).to.equal(5);
@@ -286,7 +286,7 @@ describe('recommended config', () => {
         expect(msg.nodeType).to.equal('VariableDeclarator');
     });
 
-    it('enforces @hapi/hapi/no-arrowception', () => {
+    it('enforces @hapi/no-arrowception', () => {
 
         const output = internals.lintFile('fixtures/no-arrowception.js');
         const results = output.results[0];
@@ -298,7 +298,7 @@ describe('recommended config', () => {
 
         const msg = results.messages[0];
 
-        expect(msg.ruleId).to.equal('@hapi/hapi/no-arrowception');
+        expect(msg.ruleId).to.equal('@hapi/no-arrowception');
         expect(msg.severity).to.equal(2);
         expect(msg.message).to.equal('Arrow function implicitly creates arrow function.');
         expect(msg.line).to.equal(2);
@@ -406,7 +406,7 @@ describe('recommended config', () => {
         expect(msg.nodeType).to.equal('Identifier');
     });
 
-    it('enforces hapi/hapi-no-var', () => {
+    it('enforces @hapi/no-var', () => {
 
         const output = internals.lintFile('fixtures/no-var.js');
         const results = output.results[0];
@@ -418,7 +418,7 @@ describe('recommended config', () => {
 
         const msg = results.messages[0];
 
-        expect(msg.ruleId).to.equal('@hapi/hapi/no-var');
+        expect(msg.ruleId).to.equal('@hapi/no-var');
         expect(msg.severity).to.equal(2);
         expect(msg.message).to.equal('Unexpected var, use let or const instead.');
         expect(msg.line).to.equal(4);

@@ -1,9 +1,9 @@
 ESLint plugin containing hapi style guide rules and config. To use in your project, add
-[`@hapi/eslint-plugin-hapi`](https://github.com/hapijs/eslint-plugin-hapi) to your `package.json`, then in your ESLint configuration add:
+[`@hapi/eslint-plugin`](https://github.com/hapijs/eslint-plugin-hapi) to your `package.json`, then in your ESLint configuration add:
 
 ```json
 {
-  "extends": "plugin:@hapi/hapi/recommended"
+  "extends": "plugin:@hapi/recommended"
 }
 ```
 
@@ -78,11 +78,11 @@ This rule does not accept any configuration options.
 
 | Rule | Option |
 |------|--------|
-| **'@hapi/hapi/capitalize-modules'** | ['warn', 'global-scope-only'] |
-| **'@hapi/hapi/for-loop'** | ['warn', { maxDepth: 3, startIterator: 'i' }] |
-| **'@hapi/hapi/no-var'** | 'error' |
-| **'@hapi/hapi/scope-start'** | 'warn' |
-| **'@hapi/hapi/no-arrowception'** | 'error' |
+| **'@hapi/capitalize-modules'** | ['warn', 'global-scope-only'] |
+| **'@hapi/for-loop'** | ['warn', { maxDepth: 3, startIterator: 'i' }] |
+| **'@hapi/no-var'** | 'error' |
+| **'@hapi/scope-start'** | 'warn' |
+| **'@hapi/no-arrowception'** | 'error' |
 | **'camelcase'** | 'off' |
 | **'consistent-return'** | 'off' |
 | **'vars-on-top'** | 'off' |
