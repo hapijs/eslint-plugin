@@ -1,7 +1,7 @@
 {
   "name": "@hapi/eslint-plugin-hapi",
   "version": "4.3.5",
-  "description": "ESLint plugin containing hapi style guide rules",
+  "description": "ESLint plugin containing hapi style guide rules and config",
   "main": "lib/index.js",
   "repository": "https://github.com/hapijs/eslint-plugin-hapi.git",
   "files": [
@@ -11,18 +11,15 @@
     "lint",
     "eslint",
     "eslintplugin",
+    "eslintconfig",
     "hapi"
   ],
-  "dependencies": {
-    "@hapi/rule-capitalize-modules": "1.x.x",
-    "@hapi/rule-for-loop": "1.x.x",
-    "@hapi/rule-no-arrowception": "1.x.x",
-    "@hapi/rule-no-var": "1.x.x",
-    "@hapi/rule-scope-start": "2.x.x"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@hapi/code": "8.x.x",
-    "@hapi/lab": "22.x.x"
+    "@hapi/eslint-plugin-hapi": "file:.",
+    "@hapi/lab": "^23.0.0",
+    "eslint": "^7.5.0"
   },
   "scripts": {
     "test": "lab -t 100 -a @hapi/code -L"
