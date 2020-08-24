@@ -23,7 +23,7 @@ describe('capitalize-modules rule', () => {
             'const foo = {bar: function() { const hapi = require("hapi"); }};'
         ];
 
-        ruleTester.run(Rule.esLintRuleName, Rule, {
+        ruleTester.run('test', Rule, {
             valid: [],
             invalid: sample.map((code) => {
 
@@ -44,7 +44,7 @@ describe('capitalize-modules rule', () => {
             'Code = require("code");'
         ];
 
-        ruleTester.run(Rule.esLintRuleName, Rule, {
+        ruleTester.run('test', Rule, {
             valid: sample.map((code) => {
 
                 return { code };
@@ -67,7 +67,7 @@ describe('capitalize-modules rule', () => {
             'let poop; poop = require("poop");'
         ];
 
-        ruleTester.run(Rule.esLintRuleName, Rule, {
+        ruleTester.run('test', Rule, {
             valid: valid.map((code) => {
 
                 return {
@@ -94,7 +94,7 @@ describe('capitalize-modules rule', () => {
             'let poop; poop = require("poop");'
         ];
 
-        ruleTester.run(Rule.esLintRuleName, Rule, {
+        ruleTester.run('test', Rule, {
             valid: [],
             invalid: invalid.map((code) => {
 
@@ -122,7 +122,7 @@ describe('capitalize-modules rule', () => {
             'const {foo} = require("bar");'
         ];
 
-        ruleTester.run(Rule.esLintRuleName, Rule, {
+        ruleTester.run('test', Rule, {
             valid: sample.map((code) => {
 
                 return { code };

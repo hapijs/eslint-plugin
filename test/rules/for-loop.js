@@ -48,7 +48,7 @@ describe('for-loop rule', () => {
             }
         ];
 
-        ruleTester.run(Rule.esLintRuleName, Rule, {
+        ruleTester.run('test', Rule, {
             valid: valids,
             invalid: invalids
         });
@@ -80,7 +80,7 @@ describe('for-loop rule', () => {
             }
         ];
 
-        ruleTester.run(Rule.esLintRuleName, Rule, {
+        ruleTester.run('test', Rule, {
             valid: valids,
             invalid: invalids
         });
@@ -111,7 +111,7 @@ describe('for-loop rule', () => {
             }
         ];
 
-        ruleTester.run(Rule.esLintRuleName, Rule, {
+        ruleTester.run('test', Rule, {
             valid: valids,
             invalid: invalids
         });
@@ -149,7 +149,7 @@ describe('for-loop rule', () => {
             }
         ];
 
-        ruleTester.run(Rule.esLintRuleName, Rule, {
+        ruleTester.run('test', Rule, {
             valid: valids,
             invalid: invalids
         });
