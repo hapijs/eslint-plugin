@@ -1,5 +1,5 @@
 ESLint plugin containing hapi style guide rules and config. To use in your project, add
-[`@hapi/eslint-plugin`](https://github.com/hapijs/eslint-plugin-hapi) to your `package.json`, then in your ESLint configuration add:
+[`@hapi/eslint-plugin`](https://github.com/hapijs/eslint-plugin) to your `package.json`, then in your ESLint configuration add:
 
 ```json
 {
