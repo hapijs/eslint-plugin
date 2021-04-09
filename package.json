@@ -14,7 +14,9 @@
     "eslintconfig",
     "hapi"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "babel-eslint": "^10.1.0"
+  },
   "devDependencies": {
     "@hapi/code": "8.x.x",
     "@hapi/eslint-plugin": "file:.",
