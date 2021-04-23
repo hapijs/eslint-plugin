@@ -320,7 +320,7 @@ describe('recommended config', () => {
 
         expect(msg.ruleId).to.equal('no-shadow');
         expect(msg.severity).to.equal(1);
-        expect(msg.message).to.equal('\'res\' is already declared in the upper scope.');
+        expect(msg.message).to.equal('\'res\' is already declared in the upper scope on line 25 column 27.');
         expect(msg.line).to.equal(27);
         expect(msg.column).to.equal(33);
         expect(msg.nodeType).to.equal('Identifier');
