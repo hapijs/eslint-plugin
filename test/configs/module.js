@@ -24,7 +24,7 @@ internals.lintFile = function (file) {
 
     const cli = new ESLint.CLIEngine({
         useEslintrc: false,
-        baseConfig: { extends: 'plugin:@hapi/internal' }
+        baseConfig: { extends: 'plugin:@hapi/module' }
     });
 
     const data = Fs.readFileSync(Path.join(__dirname, file), 'utf8');
