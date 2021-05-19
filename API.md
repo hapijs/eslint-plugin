@@ -1,9 +1,30 @@
-ESLint plugin containing hapi style guide rules and config. To use in your project, add
+## Configurations
+
+This ESLint plugin exposes two configurations:
+
+* `@hapi/recommended`
+* `@hapi/module`
+
+### `@hapi/recommended`
+
+An ESLint configuration containing hapi style guide rules and config. To use in your project, add
 [`@hapi/eslint-plugin`](https://github.com/hapijs/eslint-plugin) to your `package.json`, then in your ESLint configuration add:
 
 ```json
 {
   "extends": "plugin:@hapi/recommended"
+}
+```
+
+### `@hapi/module`
+
+The ESLint configuration used by [`@hapi/lab`](https://hapi.dev/module/lab/) when you use the linting feature through either the [`-L`](https://hapi.dev/module/lab/api/#command-line) command argument or the `lint: true` configuration.
+
+To use it in your project, add [`@hapi/eslint-plugin`](https://github.com/hapijs/eslint-plugin) to your `package.json`, then in your ESLint configuration add:
+
+```json
+{
+  "extends": "plugin:@hapi/module"
 }
 ```
 
