@@ -20,7 +20,13 @@ An ESLint configuration containing hapi style guide rules and config. To use in 
 
 The ESLint configuration used by [`@hapi/lab`](https://hapi.dev/module/lab/) when you use the linting feature through either the [`-L`](https://hapi.dev/module/lab/api/#command-line) command argument or the `lint: true` configuration.
 
-To use it in your project, add [`@hapi/eslint-plugin`](https://github.com/hapijs/eslint-plugin) to your `package.json`, then in your ESLint configuration add:
+To use it in your project, there are multiple dependencies you need to add to your `package.json`:
+
+* [`@hapi/eslint-plugin`](https://github.com/hapijs/eslint-plugin)
+* [`@babel/core`](https://www.npmjs.com/package/@babel/core)
+* [`@babel/eslint-parser`](https://www.npmjs.com/package/@babel/eslint-parser)
+
+Then in your ESLint configuration add:
 
 ```json
 {
