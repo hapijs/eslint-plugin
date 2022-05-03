@@ -31,7 +31,6 @@
     "@babel/core": "^7.14.3",
     "@babel/eslint-parser": "^7.14.3",
     "@hapi/code": "8.x.x",
-    "@hapi/eslint-plugin": "file:.",
     "@hapi/lab": "^24.0.0",
     "eslint": "^7.5.0"
   },
