@@ -36,7 +36,7 @@
     "eslint": "^8.0.0"
   },
   "scripts": {
-    "test": "lab -t 100 -a @hapi/code -L"
+    "test": "lab -a @hapi/code -L"
   },
   "license": "BSD-3-Clause"
 }
