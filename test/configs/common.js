@@ -2,13 +2,11 @@
 
 module.exports = function commonTestCases(expect, it, lintFile) {
 
-    it('enforces file level strict mode', () => {
+    it('enforces file level strict mode', async () => {
 
-        const output = lintFile('fixtures/strict.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/strict.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(1);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(1);
         expect(results.warningCount).to.equal(0);
 
@@ -22,13 +20,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('Program');
     });
 
-    it('enforces stroustrup style braces', () => {
+    it('enforces stroustrup style braces', async () => {
 
-        const output = lintFile('fixtures/brace-style.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/brace-style.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(0);
-        expect(output.warningCount).to.equal(1);
         expect(results.errorCount).to.equal(0);
         expect(results.warningCount).to.equal(1);
 
@@ -42,13 +38,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('Punctuator');
     });
 
-    it('enforces four space indentation', () => {
+    it('enforces four space indentation', async () => {
 
-        const output = lintFile('fixtures/indent.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/indent.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(1);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(1);
         expect(results.warningCount).to.equal(0);
 
@@ -62,13 +56,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('Keyword');
     });
 
-    it('enforces case indentation in switch statements', () => {
+    it('enforces case indentation in switch statements', async () => {
 
-        const output = lintFile('fixtures/indent-switch-case.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/indent-switch-case.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(5);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(5);
         expect(results.warningCount).to.equal(0);
 
@@ -118,13 +110,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('Keyword');
     });
 
-    it('enforces semicolon usage', () => {
+    it('enforces semicolon usage', async () => {
 
-        const output = lintFile('fixtures/semi.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/semi.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(1);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(1);
         expect(results.warningCount).to.equal(0);
 
@@ -138,13 +128,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('ReturnStatement');
     });
 
-    it('enforces no extra semicolons', () => {
+    it('enforces no extra semicolons', async () => {
 
-        const output = lintFile('fixtures/no-extra-semi.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/no-extra-semi.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(1);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(1);
         expect(results.warningCount).to.equal(0);
 
@@ -158,13 +146,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('EmptyStatement');
     });
 
-    it('enforces space-before-function-paren', () => {
+    it('enforces space-before-function-paren', async () => {
 
-        const output = lintFile('fixtures/space-before-function-paren.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/space-before-function-paren.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(2);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(2);
         expect(results.warningCount).to.equal(0);
 
@@ -187,13 +173,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('FunctionExpression');
     });
 
-    it('enforces @hapi/for-loop', () => {
+    it('enforces @hapi/for-loop', async () => {
 
-        const output = lintFile('fixtures/hapi-for-you.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/hapi-for-you.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(0);
-        expect(output.warningCount).to.equal(2);
         expect(results.errorCount).to.equal(0);
         expect(results.warningCount).to.equal(2);
 
@@ -216,13 +200,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('ForStatement');
     });
 
-    it('enforces @hapi/scope-start', () => {
+    it('enforces @hapi/scope-start', async () => {
 
-        const output = lintFile('fixtures/hapi-scope-start.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/hapi-scope-start.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(0);
-        expect(output.warningCount).to.equal(1);
         expect(results.errorCount).to.equal(0);
         expect(results.warningCount).to.equal(1);
 
@@ -236,13 +218,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('FunctionExpression');
     });
 
-    it('enforces @hapi/capitalize-modules', () => {
+    it('enforces @hapi/capitalize-modules', async () => {
 
-        const output = lintFile('fixtures/hapi-capitalize-modules.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/hapi-capitalize-modules.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(0);
-        expect(output.warningCount).to.equal(1);
         expect(results.errorCount).to.equal(0);
         expect(results.warningCount).to.equal(1);
 
@@ -256,13 +236,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('VariableDeclarator');
     });
 
-    it('enforces @hapi/no-arrowception', () => {
+    it('enforces @hapi/no-arrowception', async () => {
 
-        const output = lintFile('fixtures/no-arrowception.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/no-arrowception.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(1);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(1);
         expect(results.warningCount).to.equal(0);
 
@@ -276,13 +254,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('ArrowFunctionExpression');
     });
 
-    it('enforces no-shadow rule', () => {
+    it('enforces no-shadow rule', async () => {
 
-        const output = lintFile('fixtures/no-shadow.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/no-shadow.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(0);
-        expect(output.warningCount).to.equal(1);
         expect(results.errorCount).to.equal(0);
         expect(results.warningCount).to.equal(1);
 
@@ -296,13 +272,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('Identifier');
     });
 
-    it('enforces one-var rule', () => {
+    it('enforces one-var rule', async () => {
 
-        const output = lintFile('fixtures/one-var.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/one-var.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(1);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(1);
         expect(results.warningCount).to.equal(0);
 
@@ -316,13 +290,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('VariableDeclaration');
     });
 
-    it('enforces no-undef rule', () => {
+    it('enforces no-undef rule', async () => {
 
-        const output = lintFile('fixtures/no-undef.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/no-undef.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(1);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(1);
         expect(results.warningCount).to.equal(0);
 
@@ -336,13 +308,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('Identifier');
     });
 
-    it('enforces no-unused-vars', () => {
+    it('enforces no-unused-vars', async () => {
 
-        const output = lintFile('fixtures/no-unused-vars.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/no-unused-vars.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(0);
-        expect(output.warningCount).to.equal(1);
         expect(results.errorCount).to.equal(0);
         expect(results.warningCount).to.equal(1);
 
@@ -356,13 +326,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('Identifier');
     });
 
-    it('enforces prefer-const', () => {
+    it('enforces prefer-const', async () => {
 
-        const output = lintFile('fixtures/prefer-const.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/prefer-const.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(1);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(1);
         expect(results.warningCount).to.equal(0);
 
@@ -376,13 +344,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('Identifier');
     });
 
-    it('enforces @hapi/no-var', () => {
+    it('enforces @hapi/no-var', async () => {
 
-        const output = lintFile('fixtures/no-var.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/no-var.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(1);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(1);
         expect(results.warningCount).to.equal(0);
 
@@ -396,13 +362,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('VariableDeclaration');
     });
 
-    it('enforces arrow-parens', () => {
+    it('enforces arrow-parens', async () => {
 
-        const output = lintFile('fixtures/arrow-parens.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/arrow-parens.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(1);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(1);
         expect(results.warningCount).to.equal(0);
 
@@ -416,13 +380,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('ArrowFunctionExpression');
     });
 
-    it('enforces arrow-spacing', () => {
+    it('enforces arrow-spacing', async () => {
 
-        const output = lintFile('fixtures/arrow-spacing.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/arrow-spacing.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(2);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(2);
         expect(results.warningCount).to.equal(0);
 
@@ -443,13 +405,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('Punctuator');
     });
 
-    it('enforces object-shorthand', () => {
+    it('enforces object-shorthand', async () => {
 
-        const output = lintFile('fixtures/object-shorthand.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/object-shorthand.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(1);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(1);
         expect(results.warningCount).to.equal(0);
 
@@ -463,13 +423,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('Property');
     });
 
-    it('enforces prefer-arrow-callback', () => {
+    it('enforces prefer-arrow-callback', async () => {
 
-        const output = lintFile('fixtures/prefer-arrow-callback.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/prefer-arrow-callback.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(1);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(1);
         expect(results.warningCount).to.equal(0);
 
@@ -483,13 +441,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('FunctionExpression');
     });
 
-    it('enforces no-constant-condition rule', () => {
+    it('enforces no-constant-condition rule', async () => {
 
-        const output = lintFile('fixtures/no-constant-condition.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/no-constant-condition.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(1);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(1);
         expect(results.warningCount).to.equal(0);
 
@@ -503,13 +459,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('ArrowFunctionExpression');
     });
 
-    it('enforces no-unsafe-finally rule', () => {
+    it('enforces no-unsafe-finally rule', async () => {
 
-        const output = lintFile('fixtures/no-unsafe-finally.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/no-unsafe-finally.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(1);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(1);
         expect(results.warningCount).to.equal(0);
 
@@ -523,13 +477,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('ReturnStatement');
     });
 
-    it('enforces no-useless-computed-key rule', () => {
+    it('enforces no-useless-computed-key rule', async () => {
 
-        const output = lintFile('fixtures/no-useless-computed-key.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/no-useless-computed-key.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(5);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(5);
         expect(results.warningCount).to.equal(0);
 
@@ -579,13 +531,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('Property');
     });
 
-    it('enforces handle-callback-err rule', () => {
+    it('enforces handle-callback-err rule', async () => {
 
-        const output = lintFile('fixtures/handle-callback-err.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/handle-callback-err.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(2);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(2);
         expect(results.warningCount).to.equal(0);
 
@@ -608,13 +558,11 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('FunctionExpression');
     });
 
-    it('enforces no-dupe-keys rule', () => {
+    it('enforces no-dupe-keys rule', async () => {
 
-        const output = lintFile('fixtures/no-dupe-keys.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/no-dupe-keys.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(1);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(1);
         expect(results.warningCount).to.equal(0);
 
@@ -628,60 +576,50 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.nodeType).to.equal('ObjectExpression');
     });
 
-    it('uses the node environment', () => {
+    it('uses the node environment', async () => {
 
-        const output = lintFile('fixtures/node-env.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/node-env.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(0);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(0);
         expect(results.warningCount).to.equal(0);
         expect(results.messages).to.equal([]);
     });
 
-    it('uses the ES6 environment', () => {
+    it('uses the ES6 environment', async () => {
 
-        const output = lintFile('fixtures/es6-env.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/es6-env.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(0);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(0);
         expect(results.warningCount).to.equal(0);
         expect(results.messages).to.equal([]);
     });
 
-    it('does not enforce the camelcase lint rule', () => {
+    it('does not enforce the camelcase lint rule', async () => {
 
-        const output = lintFile('fixtures/camelcase.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/camelcase.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(0);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(0);
         expect(results.warningCount).to.equal(0);
         expect(results.messages).to.equal([]);
     });
 
-    it('enforces key-spacing', () => {
+    it('enforces key-spacing', async () => {
 
-        const output = lintFile('fixtures/key-spacing.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/key-spacing.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(2);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(2);
         expect(results.warningCount).to.equal(0);
     });
 
-    it('enforces space-before-blocks', () => {
+    it('enforces space-before-blocks', async () => {
 
-        const output = lintFile('fixtures/space-before-blocks.js');
-        const results = output.results[0];
+        const output = await lintFile('fixtures/space-before-blocks.js');
+        const results = output[0];
 
-        expect(output.errorCount).to.equal(2);
-        expect(output.warningCount).to.equal(0);
         expect(results.errorCount).to.equal(2);
         expect(results.warningCount).to.equal(0);
     });

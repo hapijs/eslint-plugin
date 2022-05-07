@@ -30,13 +30,13 @@
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/eslint-parser": "^7.14.3",
-    "@hapi/code": "8.x.x",
+    "@hapi/code": "^9.0.0",
     "@hapi/eslint-plugin": "file:.",
-    "@hapi/lab": "^24.0.0",
-    "eslint": "^7.5.0"
+    "@hapi/lab": "25.0.0-beta.1",
+    "eslint": "^8.0.0"
   },
   "scripts": {
-    "test": "lab -t 100 -a @hapi/code -L"
+    "test": "lab -a @hapi/code -L"
   },
   "license": "BSD-3-Clause"
 }
