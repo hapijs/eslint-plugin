@@ -5,7 +5,7 @@ module.exports.foo = function () {
     try {
 
     }
-    catch (e) {
+    catch {
 
     };
 

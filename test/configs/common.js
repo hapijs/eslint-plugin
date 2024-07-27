@@ -33,7 +33,7 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.ruleId).to.equal('brace-style');
         expect(msg.severity).to.equal(1);
         expect(msg.message).to.equal('Closing curly brace appears on the same line as the subsequent block.');
-        expect(msg.line).to.equal(9);
+        expect(msg.line).to.equal(8);
         expect(msg.column).to.equal(1);
         expect(msg.nodeType).to.equal('Punctuator');
     });
@@ -186,7 +186,7 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.ruleId).to.equal('@hapi/for-loop');
         expect(msg.severity).to.equal(1);
         expect(msg.message).to.equal('Expected iterator \'j\', but got \'k\'.');
-        expect(msg.line).to.equal(7);
+        expect(msg.line).to.equal(6);
         expect(msg.column).to.equal(5);
         expect(msg.nodeType).to.equal('ForStatement');
 
@@ -195,7 +195,7 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.ruleId).to.equal('@hapi/for-loop');
         expect(msg.severity).to.equal(1);
         expect(msg.message).to.equal('Update to iterator should use prefix operator.');
-        expect(msg.line).to.equal(7);
+        expect(msg.line).to.equal(6);
         expect(msg.column).to.equal(5);
         expect(msg.nodeType).to.equal('ForStatement');
     });
@@ -454,7 +454,7 @@ module.exports = function commonTestCases(expect, it, lintFile) {
         expect(msg.ruleId).to.equal('no-constant-condition');
         expect(msg.severity).to.equal(2);
         expect(msg.message).to.equal('Unexpected constant condition.');
-        expect(msg.line).to.equal(4);
+        expect(msg.line).to.equal(3);
         expect(msg.column).to.equal(5);
         expect(msg.nodeType).to.equal('ArrowFunctionExpression');
     });

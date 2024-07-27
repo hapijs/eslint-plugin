@@ -26,7 +26,7 @@ describe('no-var rule', () => {
             'var a = 1; try {} catch (err) {}'
         ];
 
-        const ruleTester = new RuleTester({ parserOptions: { ecmaVersion: 6 } });
+        const ruleTester = new RuleTester({ languageOptions: { ecmaVersion: 6 } });
         ruleTester.run('test', Rule, {
             valid: [],
             invalid: sample.map((code) => {
@@ -49,7 +49,7 @@ describe('no-var rule', () => {
             'try { var a = 1; } catch (err) {} console.log(a);'
         ];
 
-        const ruleTester = new RuleTester({ parserOptions: { ecmaVersion: 6 } });
+        const ruleTester = new RuleTester({ languageOptions: { ecmaVersion: 6 } });
         ruleTester.run('test', Rule, {
             valid: sample.map((code) => {
 

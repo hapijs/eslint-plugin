@@ -16,7 +16,7 @@ describe('capitalize-modules rule', () => {
 
     it('reports warning when module is not capitalized', () => {
 
-        const ruleTester = new ESLint.RuleTester({ parserOptions: { ecmaVersion: 2019 } });
+        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
         const sample = [
             'const hapi = require("hapi");',
             'let poop; poop = require("poop");',
@@ -37,7 +37,7 @@ describe('capitalize-modules rule', () => {
 
     it('does not report anything if module variable is capitalized', () => {
 
-        const ruleTester = new ESLint.RuleTester({ parserOptions: { ecmaVersion: 2019 } });
+        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
         const sample = [
             'const Hapi = require("hapi");',
             'let Poop; Poop = require("poop");',
@@ -55,7 +55,7 @@ describe('capitalize-modules rule', () => {
 
     it('only warns on globals when global-scope-only is set', () => {
 
-        const ruleTester = new ESLint.RuleTester({ parserOptions: { ecmaVersion: 2019 } });
+        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
         const valid = [
             'function foo() { const hapi = require("hapi"); }',
             'const foo = function() { const hapi = require("hapi"); }',
@@ -88,7 +88,7 @@ describe('capitalize-modules rule', () => {
 
     it('global-scope-only works in the presense of ES6 modules', () => {
 
-        const ruleTester = new ESLint.RuleTester({ parserOptions: { ecmaVersion: 2019 } });
+        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
         const invalid = [
             'hapi = require("hapi");',
             'let poop; poop = require("poop");'
@@ -109,7 +109,7 @@ describe('capitalize-modules rule', () => {
 
     it('does not report anything for non-module variables', () => {
 
-        const ruleTester = new ESLint.RuleTester({ parserOptions: { ecmaVersion: 2019 } });
+        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
         const sample = [
             'let foo, bar, baz;',
             'const foo = fn()',

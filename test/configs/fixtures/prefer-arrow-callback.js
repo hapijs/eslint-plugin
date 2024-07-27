@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars, handle-callback-err */
+/* eslint-disable handle-callback-err */
 'use strict';
 
 const foo = (arg, callback) => {

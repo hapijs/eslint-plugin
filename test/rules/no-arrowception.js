@@ -19,7 +19,7 @@ describe('no-arrowception rule', () => {
 
     it('reports error when an arrow function implicitly creates another arrow function', () => {
 
-        const ruleTester = new ESLint.RuleTester({ parserOptions: { ecmaVersion: 2019 } });
+        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
         const valids = [
             'const foo = () => 85;',
             'const foo = () => { return 42; }',

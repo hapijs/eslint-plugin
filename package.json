@@ -4,6 +4,9 @@
   "description": "ESLint plugin containing hapi style guide rules and config",
   "main": "lib/index.js",
   "repository": "https://github.com/hapijs/eslint-plugin.git",
+  "engines": {
+    "node": ">=18"
+  },
   "files": [
     "lib"
   ],
@@ -15,8 +18,8 @@
     "hapi"
   ],
   "peerDependencies": {
-    "@babel/core": "^7.14.3",
-    "@babel/eslint-parser": "^7.14.3"
+    "@babel/core": "^7.24.9",
+    "@babel/eslint-parser": "^7.25.0"
   },
   "peerDependenciesMeta": {
     "@babel/core": {
@@ -26,14 +29,17 @@
       "optional": true
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "globals": "^15.11.0"
+  },
   "devDependencies": {
-    "@babel/core": "^7.14.3",
-    "@babel/eslint-parser": "^7.14.3",
-    "@hapi/code": "^9.0.0",
+    "@babel/core": "^7.24.9",
+    "@babel/eslint-parser": "^7.25.0",
+    "@hapi/code": "^9.0.3",
     "@hapi/eslint-plugin": "file:.",
-    "@hapi/lab": "25.0.0-beta.1",
-    "eslint": "^8.0.0"
+    "@hapi/lab": "^25.3.0",
+    "@types/eslint": "^9.6.0",
+    "eslint": "^9.8.0"
   },
   "scripts": {
     "test": "lab -a @hapi/code -L"

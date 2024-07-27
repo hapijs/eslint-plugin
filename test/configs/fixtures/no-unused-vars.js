@@ -5,4 +5,4 @@ const bar = function (foo) {
 
 };
 
-return bar;
+bar.toString();

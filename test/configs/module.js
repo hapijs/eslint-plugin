@@ -8,6 +8,7 @@ const ESLint = require('eslint');
 const Lab = require('@hapi/lab');
 
 const CommonTestCases = require('./common');
+const HapiPlugin = require('../../lib');
 
 
 const internals = {};
@@ -23,8 +24,8 @@ Code.settings.truncateMessages = false;
 internals.lintFile = async function (file) {
 
     const cli = new ESLint.ESLint({
-        useEslintrc: false,
-        baseConfig: { extends: 'plugin:@hapi/module' }
+        overrideConfigFile: true,
+        baseConfig: [...HapiPlugin.configs.module]
     });
 
     const data = await Fs.promises.readFile(Path.join(__dirname, file), 'utf8');
