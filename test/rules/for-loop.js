@@ -19,7 +19,7 @@ describe('for-loop rule', () => {
 
     it('enforces iterator variable naming', () => {
 
-        const ruleTester = new ESLint.RuleTester({ parserOptions: { ecmaVersion: 2019 } });
+        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
         const valids = [
             {
                 code: 'for (let i = 0; i < a.length; ++i) { for (let j = 0; j < b.length; ++j) {} }'
@@ -56,7 +56,7 @@ describe('for-loop rule', () => {
 
     it('enforces a maximum of one variable initialized per loop', () => {
 
-        const ruleTester = new ESLint.RuleTester({ parserOptions: { ecmaVersion: 2019 } });
+        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
         const valids = [
             {
                 code: 'for (let i = 0; i < a.length; ++i) {}'
@@ -88,7 +88,7 @@ describe('for-loop rule', () => {
 
     it('enforces the maximum number of nested for loops', () => {
 
-        const ruleTester = new ESLint.RuleTester({ parserOptions: { ecmaVersion: 2019 } });
+        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
         const valids = [
             {
                 code: 'for (let i = 0; i < a.length; ++i) {}'
@@ -119,7 +119,7 @@ describe('for-loop rule', () => {
 
     it('prevents post-increment and post-decrement', () => {
 
-        const ruleTester = new ESLint.RuleTester({ parserOptions: { ecmaVersion: 2019 } });
+        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
         const valids = [
             {
                 code: 'for (let i = 0; i < a.length; ++i) {}'

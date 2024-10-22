@@ -1,4 +1,3 @@
-/* eslint-disable keyword-spacing */
 'use strict';
 
 const foo = true;
@@ -17,4 +16,4 @@ else {
     bar = 4;
 }
 
-return bar;
+bar.toString();

@@ -16,4 +16,4 @@ case 'bar':
     break;
 }
 
-return result;
+result.toString();

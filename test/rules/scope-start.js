@@ -16,7 +16,7 @@ describe('scope-start rule', () => {
 
     it('reports warning when function body does not begin with a blank line', () => {
 
-        const ruleTester = new ESLint.RuleTester({ parserOptions: { ecmaVersion: 2019 } });
+        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
         const invalids = [
             `function fn() {
                 return;
@@ -48,7 +48,7 @@ describe('scope-start rule', () => {
 
     it('does not report anything when function body begins with a blank line', () => {
 
-        const ruleTester = new ESLint.RuleTester({ parserOptions: { ecmaVersion: 2019 } });
+        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
         const valids = [
             `function fn() {
 
@@ -79,7 +79,7 @@ describe('scope-start rule', () => {
 
     it('does not report anything when function is one line and allow-one-liners is set', () => {
 
-        const ruleTester = new ESLint.RuleTester({ parserOptions: { ecmaVersion: 2019 } });
+        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
         const valids = [
             'function fn() { return; }',
             'function fn(foo, bar, baz) { return; }'
@@ -99,7 +99,7 @@ describe('scope-start rule', () => {
 
     it('reports an error when function is allow-one-liners is set but function body contains too many statements', () => {
 
-        const ruleTester = new ESLint.RuleTester({ parserOptions: { ecmaVersion: 2019 } });
+        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
         const invalids = [
             'function fn() { let i = 0; i++; return; }'
         ];
@@ -119,7 +119,7 @@ describe('scope-start rule', () => {
 
     it('allow-one-liners defaults to 1', () => {
 
-        const ruleTester = new ESLint.RuleTester({ parserOptions: { ecmaVersion: 2019 } });
+        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
         const invalids = [
             'function fn() { console.log(\'broken\'); return; }'
         ];
@@ -139,7 +139,7 @@ describe('scope-start rule', () => {
 
     it('does not report anything when function body is empty', () => {
 
-        const ruleTester = new ESLint.RuleTester({ parserOptions: { ecmaVersion: 2019 } });
+        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
         const valids = [
             'function fn() { }',
             'function fn(foo, bar, baz) { }',
@@ -160,7 +160,7 @@ describe('scope-start rule', () => {
 
     it('handles function expressions', () => {
 
-        const ruleTester = new ESLint.RuleTester({ parserOptions: { ecmaVersion: 2019 } });
+        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
 
         const code = `const foo =  function () {
 
@@ -175,7 +175,7 @@ describe('scope-start rule', () => {
 
     it('handles arrow functions', () => {
 
-        const ruleTester = new ESLint.RuleTester({ parserOptions: { ecmaVersion: 2019 } });
+        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
         const valids = [
             'const foo = () => {\n\nreturn;};',
             'const foo = () => {\n\nreturn;}',
