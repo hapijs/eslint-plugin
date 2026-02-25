@@ -1,4 +1,4 @@
-/* eslint-disable strict, no-unused-vars */
+/* eslint-disable no-unused-vars */
 const a = {
     b:   'c',
     c  : 'd'

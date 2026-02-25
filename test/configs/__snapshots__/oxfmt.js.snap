@@ -1,0 +1,106 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`oxfmt config > formats arrow-parens.js correctly 1`] = `
+"/* eslint-disable no-unused-vars */
+const foo = (bar) => {
+    return bar + 1;
+};
+
+const baz = (quux) => {
+    return quux + 1;
+};
+"
+`;
+
+exports[`oxfmt config > formats arrow-spacing.js correctly 1`] = `
+"/* eslint-disable no-unused-vars */
+const foo = (bar) => {
+    return bar + 1;
+};
+
+const baz = (quux) => {
+    return quux + 1;
+};
+
+const fn = (arg) => {
+    return arg + 1;
+};
+"
+`;
+
+exports[`oxfmt config > formats indent.js correctly 1`] = `
+"export const foo = function (value) {
+    return value + 1;
+};
+
+export const bar = function (value) {
+    return value + 1;
+};
+"
+`;
+
+exports[`oxfmt config > formats indent-switch-case.js correctly 1`] = `
+"const foo = 'foo';
+let result = 0;
+
+switch (foo) {
+    case 'foo':
+        result = 1;
+        break;
+
+    case 'bar':
+        result = 2;
+        break;
+    case 'baz':
+        result = 3;
+        break;
+}
+
+result.toString();
+"
+`;
+
+exports[`oxfmt config > formats no-extra-semi.js correctly 1`] = `
+"/* eslint-disable padding-line-between-statements */
+
+export const foo = function () {
+    try {
+    } catch {}
+};
+"
+`;
+
+exports[`oxfmt config > formats semi.js correctly 1`] = `
+"export const foo = function () {
+    return 42;
+};
+
+export const bar = function () {
+    return 85;
+};
+"
+`;
+
+exports[`oxfmt config > formats space-before-blocks.js correctly 1`] = `
+"/* eslint-disable no-unused-vars */
+
+const foo = function () {};
+
+const bar = function () {};
+
+const baz = function () {};
+"
+`;
+
+exports[`oxfmt config > formats space-before-function-paren.js correctly 1`] = `
+"/* eslint-disable no-unused-vars */
+
+const foo = function () {};
+
+const bar = function () {};
+
+const baz = function baz() {};
+
+const quux = function quux() {};
+"
+`;

@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
-'use strict';
 
-module.exports.foo = function (value) {
+export const foo = function (value) {
 
     const top = function (err) {
 
@@ -15,7 +14,7 @@ module.exports.foo = function (value) {
 };
 
 
-module.exports.bar = function (value) {
+export const bar = function (value) {
 
     const top = function (abc) {
 

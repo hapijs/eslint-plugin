@@ -1,3 +1,3 @@
-/* eslint-disable strict, no-unused-vars */
+/* eslint-disable no-unused-vars */
 const foo = () => () => 85;
 const bar = () => 85;

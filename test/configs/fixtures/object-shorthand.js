@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-'use strict';
 
 const a = 1;
 const b = 2;

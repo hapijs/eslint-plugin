@@ -1,34 +1,19 @@
-'use strict';
+import { describe, it, expect } from 'vitest';
 
-const Code = require('@hapi/code');
-const Lab = require('@hapi/lab');
-const Plugin = require('..');
-
-
-const internals = {};
-
-
-const { describe, it } = exports.lab = Lab.script();
-const expect = Code.expect;
-
-
-Code.settings.truncateMessages = false;
-
+import Plugin from '..';
 
 describe('ESLint Plugin', () => {
-
     it('exposes all expected rules', () => {
-
-        expect(Plugin.rules).to.exist();
-        expect(Plugin.rules).to.be.an.object();
+        expect(Plugin.rules).toBeDefined();
+        expect(Plugin.rules).toBeTypeOf('object');
 
         const rules = Object.keys(Plugin.rules);
 
-        expect(rules.length).to.equal(5);
-        expect(rules.includes('capitalize-modules')).to.be.true();
-        expect(rules.includes('for-loop')).to.be.true();
-        expect(rules.includes('no-var')).to.be.true();
-        expect(rules.includes('scope-start')).to.be.true();
-        expect(rules.includes('no-arrowception')).to.be.true();
+        expect(rules.length).toBe(5);
+        expect(rules.includes('capitalize-modules')).toBe(true);
+        expect(rules.includes('for-loop')).toBe(true);
+        expect(rules.includes('no-var')).toBe(true);
+        expect(rules.includes('scope-start')).toBe(true);
+        expect(rules.includes('no-arrowception')).toBe(true);
     });
 });

@@ -1,5 +1,3 @@
-'use strict';
-
 const foo = true;
 let bar = 0;
 

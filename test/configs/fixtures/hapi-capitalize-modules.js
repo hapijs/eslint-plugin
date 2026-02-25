@@ -1,13 +1,12 @@
 /* eslint-disable no-unused-vars */
-'use strict';
 
-const Fs = require('fs');
-const net = require('net');
+import Fs from 'fs';
+import net from 'net';
 
-const fn = function () {
+const fn = async function () {
 
-    const Assert = require('assert');
-    const dgram = require('dgram');
+    const Assert = await import('assert');
+    const dgram = await import('dgram');
 };
 
 fn();

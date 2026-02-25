@@ -1,115 +1,68 @@
-'use strict';
+import { RuleTester } from 'oxlint/plugins-dev';
+import { describe, it } from 'vitest';
 
-const Code = require('@hapi/code');
-const ESLint = require('eslint');
-const Lab = require('@hapi/lab');
-const Rule = require('../../lib/rules/capitalize-modules');
+import HapiRecommended from '../../src/configs/recommended.js';
+import Rule from '../../src/rules/capitalize-modules';
 
-
-const { describe, it } = exports.lab = Lab.script();
-
-
-Code.settings.truncateMessages = false;
-
+const ruleTester = new RuleTester(HapiRecommended);
 
 describe('capitalize-modules rule', () => {
-
     it('reports warning when module is not capitalized', () => {
-
-        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
         const sample = [
-            'const hapi = require("hapi");',
-            'let poop; poop = require("poop");',
-            'const foo = {bar: function() { const hapi = require("hapi"); }};'
+            'import hapi from "hapi";',
+            'import * as hapi from "hapi";',
+            'async function x() { const hapi = await import("hapi"); }',
         ];
 
         ruleTester.run('test', Rule, {
             valid: [],
             invalid: sample.map((code) => {
-
                 return {
                     code,
-                    errors: [{ message: 'Imported module variable name not capitalized.' }]
+                    errors: [{ message: 'Imported module variable name not capitalized.' }],
                 };
-            })
+            }),
         });
     });
 
     it('does not report anything if module variable is capitalized', () => {
-
-        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
-        const sample = [
-            'const Hapi = require("hapi");',
-            'let Poop; Poop = require("poop");',
-            'Code = require("code");'
-        ];
+        const sample = ['import Hapi from "hapi";', 'import * as Hapi from "hapi";', 'import { hapi } from "hapi";'];
 
         ruleTester.run('test', Rule, {
             valid: sample.map((code) => {
-
                 return { code };
             }),
-            invalid: []
+            invalid: [],
         });
     });
 
     it('only warns on globals when global-scope-only is set', () => {
-
-        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
         const valid = [
-            'function foo() { const hapi = require("hapi"); }',
-            'const foo = function() { const hapi = require("hapi"); }',
-            'const foo = {bar: function() { hapi = require("hapi"); }};'
+            'import Hapi from "hapi";',
+            'import * as Hapi from "hapi";',
+            'async function x() { const hapi = await import("hapi"); }',
         ];
 
-        const invalid = [
-            'hapi = require("hapi");',
-            'let poop; poop = require("poop");'
-        ];
+        const invalid = ['import hapi from "hapi";', 'import * as hapi from "hapi";'];
 
         ruleTester.run('test', Rule, {
             valid: valid.map((code) => {
-
                 return {
                     code,
-                    options: ['global-scope-only']
+                    options: ['global-scope-only'],
                 };
             }),
             invalid: invalid.map((code) => {
-
                 return {
                     code,
                     options: ['global-scope-only'],
-                    errors: [{ message: 'Imported module variable name not capitalized.' }]
+                    errors: [{ message: 'Imported module variable name not capitalized.' }],
                 };
-            })
-        });
-    });
-
-    it('global-scope-only works in the presense of ES6 modules', () => {
-
-        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
-        const invalid = [
-            'hapi = require("hapi");',
-            'let poop; poop = require("poop");'
-        ];
-
-        ruleTester.run('test', Rule, {
-            valid: [],
-            invalid: invalid.map((code) => {
-
-                return {
-                    code,
-                    options: ['global-scope-only'],
-                    errors: [{ message: 'Imported module variable name not capitalized.' }]
-                };
-            })
+            }),
         });
     });
 
     it('does not report anything for non-module variables', () => {
-
-        const ruleTester = new ESLint.RuleTester({ languageOptions: { ecmaVersion: 2019 } });
         const sample = [
             'let foo, bar, baz;',
             'const foo = fn()',
@@ -117,17 +70,14 @@ describe('capitalize-modules rule', () => {
             'const foo = this.bar()',
             'foo[bar] = 5;',
             'this.foo = null;',
-            '[foo, bar] = [1, 2];',
-            '[foo, bar] = require("baz");',
-            'const {foo} = require("bar");'
+            ' [foo, bar] = [1, 2];',
         ];
 
         ruleTester.run('test', Rule, {
             valid: sample.map((code) => {
-
                 return { code };
             }),
-            invalid: []
+            invalid: [],
         });
     });
 });

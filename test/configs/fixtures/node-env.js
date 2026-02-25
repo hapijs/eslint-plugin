@@ -1,4 +1,3 @@
-/* eslint-disable strict */
-const Fs = require('fs');
+import Fs from "fs";
 
-module.exports = Fs;
+export default Fs;

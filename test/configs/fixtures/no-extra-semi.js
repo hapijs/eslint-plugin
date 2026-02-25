@@ -1,6 +1,6 @@
-/* eslint-disable padding-line-between-statements,strict */
+/* eslint-disable padding-line-between-statements */
 
-module.exports.foo = function () {
+export const foo = function () {
 
     try {
 

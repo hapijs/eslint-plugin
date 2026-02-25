@@ -1,5 +1,4 @@
-/* eslint-disable strict */
-module.exports.foo = function () {
+export const foo = function () {
 
     try {
         return 1;

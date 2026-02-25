@@ -1,10 +1,9 @@
-/* eslint-disable strict */
-module.exports.foo = function () {
+export const foo = function () {
 
     return 42
 };
 
-module.exports.bar = function () {
+export const bar = function () {
 
     return 85;
 };

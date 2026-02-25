@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-'use strict';
 
 const obj = {
     a: 1,

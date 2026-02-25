@@ -1,4 +1,4 @@
-/* eslint-disable strict, no-unused-vars */
+/* eslint-disable no-unused-vars */
 const foo = function () {
     return 'there should be a blank line before this line';
 };

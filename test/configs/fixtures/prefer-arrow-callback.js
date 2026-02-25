@@ -1,5 +1,4 @@
 /* eslint-disable handle-callback-err */
-'use strict';
 
 const foo = (arg, callback) => {
 

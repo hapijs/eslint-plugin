@@ -1,4 +1,4 @@
-/* eslint-disable strict, no-unused-vars, handle-callback-err */
+/* eslint-disable no-unused-vars, handle-callback-err */
 
 
 // Declare internals
@@ -6,7 +6,7 @@
 const internals = {};
 
 
-module.exports.foo = function (value) {
+export const foo = function (value) {
 
     const top = function (err) {
 
@@ -20,7 +20,7 @@ module.exports.foo = function (value) {
 };
 
 
-module.exports.bar = function (value) {
+export const bar = function (value) {
 
     const top = function (res) {
 

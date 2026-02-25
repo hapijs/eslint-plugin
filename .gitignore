@@ -1,7 +1,8 @@
 **/node_modules
 **/package-lock.json
+pnpm-lock.yaml
 
-coverage.*
+coverage
 
 **/.DS_Store
 **/._*
